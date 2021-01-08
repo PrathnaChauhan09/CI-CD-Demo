@@ -17,11 +17,6 @@ jobs:
         with:
           dotnet-version: '3.1.x' # SDK Version to use; x will use the latest version of the 3.1 channel
           
-      - name: Restore packages
-        run: dotnet restore
-             
-      - name: Build with Dot Net
-        run: dotnet build
-        
+      
       - name: Publish Code
         run : dotnet publish
