@@ -20,3 +20,9 @@ jobs:
       
       - name: Publish Code
         run : dotnet publish
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Publish_Artifact
+          path: Publish_Artifacts.txt
