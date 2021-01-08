@@ -22,3 +22,6 @@ jobs:
              
       - name: Build with Dot Net
         run: dotnet build
+        
+      - name: Publish Code
+        run : dotnet publish
