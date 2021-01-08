@@ -24,7 +24,7 @@ jobs:
         run: echo hello > ~/new/artifact/Publish_Artifacts.txt
             
       - name: Publish Code
-        run : dotnet publish --output "~/new/artifact/Publish_Artifacts.txt"
+        run : dotnet publish --output ~/new/artifact/Publish_Artifacts.txt
         
       - name: Upload artifact
         uses: actions/upload-artifact@v2
