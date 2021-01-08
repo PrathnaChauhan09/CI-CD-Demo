@@ -22,7 +22,8 @@ jobs:
         run : dotnet publish
         
       - name: Create File
-        run: echo Publish_Artifacts_Log > Publish_Artifact.txt
+      - run: mkdir -p ~/new/artifact
+      - run: echo hello > ~/new/artifact/Publish_Artifacts.txt
       
       - name: Upload artifact
         uses: actions/upload-artifact@v2
