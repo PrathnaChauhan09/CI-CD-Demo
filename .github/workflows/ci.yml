@@ -32,3 +32,9 @@ jobs:
           name: 'Test'	
           path: '~/new/**/*'
         
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Publish_Artifacts
+          path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/
