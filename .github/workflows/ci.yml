@@ -20,6 +20,9 @@ jobs:
       
       - name: Publish Code
         run : dotnet publish
+        
+      - name: Create File
+        run: echo Publish_Artifacts_Log > Publish_Artifact.txt
       
       - name: Upload artifact
         uses: actions/upload-artifact@v2
