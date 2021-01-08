@@ -16,17 +16,16 @@ jobs:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.x' # SDK Version to use; x will use the latest version of the 3.1 channel
-          
-      
-      - name: Publish Code
-        run : dotnet publish
-        
+       
       - name: Create Directory
         run: mkdir -p ~/new/artifact
         
       - name: Create File
         run: echo hello > ~/new/artifact/Publish_Artifacts.txt
-      
+            
+      - name: Publish Code
+        run : echo dotnet publish > ~/new/artifact/Publish_Artifacts.txt
+        
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
