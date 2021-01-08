@@ -21,8 +21,10 @@ jobs:
       - name: Publish Code
         run : dotnet publish
         
-      - name: Create File
+      - name: Create Directory
       - run: mkdir -p ~/new/artifact
+        
+      - name: Create File
       - run: echo hello > ~/new/artifact/Publish_Artifacts.txt
       
       - name: Upload artifact
