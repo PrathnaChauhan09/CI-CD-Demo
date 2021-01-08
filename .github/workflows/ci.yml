@@ -16,5 +16,9 @@ jobs:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.x' # SDK Version to use; x will use the latest version of the 3.1 channel
-      - run: dotnet restore
-             dotnet build
+          
+      - name: Restore packages
+        run: dotnet restore
+             
+      - name: Build with Dot Net
+        run: dotnet build
