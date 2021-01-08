@@ -22,10 +22,10 @@ jobs:
         run : dotnet publish
         
       - name: Create Directory
-      - run: mkdir -p ~/new/artifact
+        run: mkdir -p ~/new/artifact
         
       - name: Create File
-      - run: echo hello > ~/new/artifact/Publish_Artifacts.txt
+        run: echo hello > ~/new/artifact/Publish_Artifacts.txt
       
       - name: Upload artifact
         uses: actions/upload-artifact@v2
