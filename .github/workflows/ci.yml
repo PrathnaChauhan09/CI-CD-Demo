@@ -24,10 +24,11 @@ jobs:
         run: echo hello > ~/new/artifact/Publish_Artifacts.txt
             
       - name: Publish Code
-        run : dotnet publish --output ~/new/artifact/Publish_Artifacts.txt
+        run : dotnet publish 
         
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: 'Artifacts-V2'	
+          name: 'Test'	
           path: '~/new/**/*'
+        
