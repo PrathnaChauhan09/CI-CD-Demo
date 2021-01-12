@@ -21,6 +21,7 @@ namespace Demo_CI_CD
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+
                 });
     }
 }
