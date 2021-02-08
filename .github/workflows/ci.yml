@@ -44,4 +44,4 @@ jobs:
           # Artifact name
           name: Download_Artifact
           # Destination path
-          path: D:/Prathna/Github Artifact/CI-CD
+          path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/
