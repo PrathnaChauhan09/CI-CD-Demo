@@ -42,6 +42,6 @@ jobs:
         uses: actions/download-artifact@v2.0.8
         with:
           # Artifact name
-          name: Download_Artifact
+          name: Publish_Artifacts
           # Destination path
           path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/
