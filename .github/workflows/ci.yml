@@ -37,3 +37,11 @@ jobs:
         with:
           name: Publish_Artifacts
           path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/
+
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.0.8
+        with:
+          # Artifact name
+          name: Download_Artifact
+          # Destination path
+          path: D:/Prathna/Github Artifact/CI-CD
