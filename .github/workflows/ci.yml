@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Publish_Artifacts
-          path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/
+          path: D:/CI-CD-Demo/publish.tar
 
       - name: Download a Build Artifact
         uses: actions/download-artifact@v2.0.8
@@ -44,7 +44,7 @@ jobs:
           # Artifact name
           name: Publish_Artifacts
           # Destination path
-          path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish
+          path: D:/Download/CI-CD-Demo
       
       - name: GitHub Actions WebDeploy
         # You may pin to the exact commit or the version.
