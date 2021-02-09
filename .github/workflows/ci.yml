@@ -44,7 +44,7 @@ jobs:
           # Artifact name
           name: Publish_Artifacts
           # Destination path
-          path: D:/CI-CD-Demo
+          path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish
       
       - name: GitHub Actions WebDeploy
         # You may pin to the exact commit or the version.
