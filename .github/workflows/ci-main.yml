@@ -18,22 +18,18 @@ jobs:
     
     # dotnet build and publish
     - name: Build with dotnet
-      run: dotnet build --configuration Release .\dotnet-core-webapp
+      run: dotnet build --configuration Release ./Demo-CI-CD
 
     - name: dotnet publish 
       run: |
-        dotnet publish -c Release -o dotnetcorewebapp .\dotnet-core-webapp
+        dotnet publish -c Release -o Demo-CI-CD ./Demo-CI-CD
     - name: Deploy to IIS
       run: |
         iisreset /stop
-        Copy-Item ./dotnetcorewebapp/* C:/inetpub/wwwroot/dotnetcore-webapp -Recurse -Force
+        Copy-Item ./Demo-CI-CD/* C:/inetpub/wwwroot/cicd-demo -Recurse -Force
         iisreset /start
     
     - name: Curl the website as a smoke test
-      run: curl http://localhost/dotnetcore-webapp
+      run: curl http://localhost:8012
 
-    - name: Run Web Test
-      run: |
-        dotnet build --configuration Release .\dotnet-core-webapp.webtest
-        cd .\dotnet-core-webapp.webtests
-        dotnet test
+ 
