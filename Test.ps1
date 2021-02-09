@@ -1,0 +1,1 @@
+Test-Connection -TargetName Windows_AWS -IPv4
