@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ development ]
   pull_request:
     branches: [ master ]
     
@@ -37,3 +37,19 @@ jobs:
         with:
           name: Publish_Artifacts
           path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/
+
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2.0.8
+        with:
+          # Artifact name
+          name: Publish_Artifacts
+          # Destination path
+          path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/
+      
+      - name: Deploy to IIS
+        run: |
+          iisreset /stop
+          Copy-Item D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/* C:/inetpub/wwwroot/cicd-demo -Recurse -Force
+          iisreset /start
+          
+          
