@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Demo_CI_CD</RootNamespace>
     <UserSecretsId>932f7e63-8c36-4d54-982e-d38f5f7c3a11</UserSecretsId>
+    <UseMsdeployExe>true</UseMsdeployExe>
   </PropertyGroup>
 
 </Project>
