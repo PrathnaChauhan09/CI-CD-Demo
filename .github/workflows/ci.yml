@@ -30,7 +30,7 @@ jobs:
                 nuget | "$(Agent.OS)"
      
       - name: Publish Code
-        run : dotnet publish -c Release -o cicd-demo ./cicd-demo
+        run : dotnet publish -c Release -o cicd-demo ./Demo CI-CD
         
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v2
@@ -49,7 +49,7 @@ jobs:
       - name: Deploy to IIS
         run: |
           iisreset /stop
-          Copy-Item ./cicd-demo/* C:/inetpub/wwwroot/cicd-demo -Recurse -Force
+          Copy-Item ./Demo CI-CD/* C:/inetpub/wwwroot/cicd-demo -Recurse -Force
           iisreset /start
           
           
