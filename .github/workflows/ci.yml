@@ -30,7 +30,7 @@ jobs:
                 nuget | "$(Agent.OS)"
      
       - name: Publish Code
-        run : dotnet publish -c Release -o Demo-CI-CD ./Demo-CI-CD
+        run : dotnet publish 
         
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v2
