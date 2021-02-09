@@ -18,11 +18,11 @@ jobs:
     
     # dotnet build and publish
     - name: Build with dotnet
-      run: dotnet build --configuration Release ./CI-CD
+      run: dotnet build --configuration Release ./Demo-CI-CD.csproj
 
     - name: dotnet publish 
       run: |
-        dotnet publish -c Release -o Demo-CI-CD ./CI-CD
+        dotnet publish -c Release -o Demo-CI-CD ./Demo-CI-CD.csproj
     - name: Deploy to IIS
       run: |
         iisreset /stop
