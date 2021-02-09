@@ -45,3 +45,9 @@ jobs:
           name: Publish_Artifacts
           # Destination path
           path: D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/
+      
+      - name: Deploy to IIS
+        run: |
+          iisreset /stop
+          Copy-Item D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/* D:/Prathna/CICD -Recurse -Force
+          iisreset /start
