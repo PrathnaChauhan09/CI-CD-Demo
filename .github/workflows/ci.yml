@@ -49,5 +49,16 @@ jobs:
       - name: Deploy to IIS
         run: |
           iisreset /stop
-          Copy-Item D:/a/CI-CD-Demo/CI-CD-Demo/bin/Debug/netcoreapp3.1/publish/* D:/Prathna/CICD -Recurse -Force
+          Copy-Item ./bin/Debug/netcoreapp3.1/publish/* D:/Prathna/CICD -Recurse -Force
           iisreset /start
+          
+          
+      - name: Copy Directory
+        # You may pin to the exact commit or the version.
+        # uses: MadaraUchiha/copy-action@7ddff6fc153a2ea2cd0fb88ed9750544c051e399
+        uses: MadaraUchiha/copy-action@0.0.1
+        with:
+          # Source file 
+          source: ./bin/Debug/netcoreapp3.1/publish/*
+          # Target file
+          target: D:/Prathna/CICD/
