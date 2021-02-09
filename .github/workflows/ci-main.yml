@@ -2,8 +2,7 @@ name: .NET Core Deploy to IIS
 
 on: 
   push:
-    branches:
-      - "self-hosted"
+    branches: [master]
 
 jobs:
   build-and-deploy:
