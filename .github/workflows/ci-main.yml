@@ -18,15 +18,15 @@ jobs:
     
     # dotnet build and publish
     - name: Build with dotnet
-      run: dotnet build --configuration Release D:/a/CI-CD-Demo/CI-CD-Demo
+      run: dotnet build --configuration Release ./Demo-CI-CD
 
     - name: dotnet publish 
       run: |
-        dotnet publish -c Release -o CI-CD-Demo D:/a/CI-CD-Demo/CI-CD-Demo
+        dotnet publish -c Release -o CI-CD-Demo ./Demo-CI-CD
     - name: Deploy to IIS
       run: |
         iisreset /stop
-        Copy-Item D:/a/CI-CD-Demo/CI-CD-Demo/* C:/inetpub/wwwroot/cicd-demo -Recurse -Force
+        Copy-Item ./Demo-CI-CD/* C:/inetpub/wwwroot/cicd-demo -Recurse -Force
         iisreset /start
     
     - name: Curl the website as a smoke test
